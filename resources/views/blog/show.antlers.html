@@ -1,0 +1,90 @@
+<section>
+    <div class="bg-backgroundLight heropattern-graphpaper-gray-50">
+        <div
+            class="container pt-48 pb-64"
+        >
+            <div class="flex flex-col items-center justify-center ">
+                    {{ categories }}
+                    {{ content }}
+                    {{ /categories }}
+                <h1
+                    class="pt-10 pb-6 text-5xl font-black leading-normal tracking-wide text-center text-txtMain"
+                >
+                    {{ title }}
+                </h1>
+                <p class="text-center text-txtLight max-w-prose">
+                    {{ article_summary }}
+                </p>
+                <div class="flex flex-row items-center pt-10">
+                    <img src="{{ author:avatar }}" alt="{{ author:name }}'s Profile Picture" class="bg-black rounded-full w-14 h-14">
+                    <p class="pl-4 text-txtLight">By<span class="mx-1 font-medium underline text-txtMain">{{ author:name }}</span>{{ date }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container -mt-48">
+        <img
+        src="{{ featured_image }}"
+        class="object-cover w-full max-w-full shadow-xl rounded-2xl h-96"
+        alt="{{ featured_image:alt }}"
+    />
+    </div>
+</section>
+<section class= "py-24 backgroundMain">
+    <div class="container">
+        <div class="flex flex-row items-stretch">
+            <div class="flex-shrink-0">
+                <ul class="sticky top-0 flex flex-col items-start pt-24 space-y-12">
+                    <li>
+                        <button aria-label="Share {{ title }} article with link" id="copyUrl"  class="inline-flex items-center justify-center w-full h-full rounded-full p-2.5 bg-primary text-txtInverse hover:bg-opacity-60 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                            <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12h6"/>
+                                <path d="M15 6h1a6 6 0 0 1 0 12h-1"/>
+                                <path d="M9 18H8A6 6 0 0 1 8 6h1"/>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <a aria-label="Share {{ title }} article on twitter" href="https://twitter.com/intent/tweet?url=schematics.com{{ url }}&text=I just read {{ title }} and it's amazing" class="inline-flex items-center justify-center w-full h-full rounded-full p-2.5 bg-primary text-txtInverse hover:bg-opacity-60 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none">
+                                <path d="M23.25 5.133a9.46 9.46 0 0 1-2.65.717 4.57 4.57 0 0 0 2.03-2.512c-.908.53-1.9.903-2.932 1.101A4.647 4.647 0 0 0 16.327 3c-2.55 0-4.615 2.034-4.615 4.542a4.37 4.37 0 0 0 .119 1.036A13.158 13.158 0 0 1 2.315 3.83a4.485 4.485 0 0 0-.627 2.283c0 1.575.821 2.967 2.062 3.782a4.57 4.57 0 0 1-2.1-.567v.056c0 2.204 1.595 4.036 3.704 4.454-.397.105-.805.159-1.216.159-.291 0-.582-.028-.868-.085.587 1.805 2.294 3.118 4.315 3.155a9.356 9.356 0 0 1-6.835 1.88A13.063 13.063 0 0 0 7.816 21c8.501 0 13.146-6.923 13.146-12.928 0-.197-.006-.394-.015-.586a9.304 9.304 0 0 0 2.303-2.353Z" fill="currentColor"/>
+                            </svg>  
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Share {{ title }} article on facebook" href="https://www.facebook.com/sharer/sharer.php?u=schematics.com{{ url }}" class="inline-flex items-center justify-center w-full h-full rounded-full p-2.5 bg-primary text-txtInverse hover:bg-opacity-60 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">   
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 12.0635C22.5 6.26504 17.7984 1.56348 12 1.56348C6.20156 1.56348 1.5 6.26504 1.5 12.0635C1.5 17.3041 5.33906 21.648 10.3594 22.4364V15.0996H7.69266V12.0635H10.3594V9.7502C10.3594 7.1191 11.9273 5.66457 14.3255 5.66457C15.4744 5.66457 16.6763 5.86988 16.6763 5.86988V8.4541H15.3516C14.048 8.4541 13.6402 9.26316 13.6402 10.0947V12.0635H16.552L16.087 15.0996H13.6406V22.4374C18.6609 21.6494 22.5 17.3055 22.5 12.0635Z" fill="currentColor"/>
+                            </svg>                                
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div
+            class="flex-1"
+            >
+                <article class="mx-auto mb-8 font-medium prose text-txtMain">
+                    {{ content_intro }}
+                </article>
+                <article class="mx-auto prose text-txtMain">
+                    {{ content }}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+copyUrlBtn = document.getElementById("copyUrl");
+
+copyUrlBtn.addEventListener("click", function() { 
+    var dummy = document.createElement('input'),
+    text = window.location.href;
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+});
+</script>

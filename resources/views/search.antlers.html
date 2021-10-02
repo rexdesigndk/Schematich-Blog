@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+    <h1 class="pt-40 pb-24 text-5xl font-black leading-normal tracking-wide text-txtMain">{{ title }}</h1>
+    <div class="pb-48">
+        {{ search:results as="results" }}
+            {{ if results }}
+            <ul class="space-y-12">
+                {{ results }}
+                <li>
+                    {{ partial:blog/partials/article }}
+                </li>
+                {{ /results }}
+            </ul>
+            {{ /if}}
+            {{ /search:results }}
+        
+            <!-- <div class="flex flex-col items-center justify-center p-10">
+                <div class="flex flex-row items-center space-x-4">
+                    <a class="p-3 border-2 rounded-full border-secondary text-secondary hover:bg-backgroundLighter focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary" href="{{ prev_page }}">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 5l-7 7 7 7"/>
+                            <path d="M4 12h16"/>
+                        </svg>
+                    </a>
+                    <a class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold tracking-wide rounded-full hover:bg-opacity-60 bg-primary text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary" href="{{ next_page }}">
+                        Load More
+                    </a>
+                </div>
+                <span class="mt-6 text-xs tracking-wide text-txtLight">{{ current_page }} of {{ total_pages }} pages</span>
+            </div> -->
+        
+        </div>
+    </div>
+    </div>
+</section>

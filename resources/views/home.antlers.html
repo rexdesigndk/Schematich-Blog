@@ -1,0 +1,183 @@
+
+    <section class="bg-backgroundLight heropattern-graphpaper-gray-50">
+        <div class="container relative flex items-center justify-center py-40">
+            <div class="flex flex-col items-center">
+                <h1 class="max-w-3xl font-black leading-normal tracking-wide text-center capitalize text-7xl text-txtMain">Web developer blog by professionals</h1>
+                <p class="mt-6 text-center text-txtLight max-w-prose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident atque ad excepturi fugiat nesciunt.</p>
+                <div class="flex flex-row items-center space-x-8">
+                    <a href="/blog" class="inline-flex flex-row items-center justify-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                        View All Articles
+                        <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 12h16"/>
+                                <path d="M13 5l7 7-7 7"/>
+                            </svg>                                              
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-24 pb-8 heropattern-graphpaper-gray-50">
+        <div class="container">
+            <h2 class="mb-16 text-3xl font-bold text-txtMain">Featured Article</h2>
+        </div>
+        <div class="container">
+        {{ collection:blog taxonomy:frontpage="article-pinned" }} 
+        <div class="flex flex-wrap -mx-8">
+            <div class="w-full px-8 lg:w-7/12 2xl:w-6/12">
+                <a href="{{ url }}" class="block w-full h-full overflow-hidden rounded-xl bg-primary hover:filter hover:saturate-150 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    <img class="object-cover w-full h-full max-w-full rounded-xl" src="{{ featured_image }}" alt="{{ featured_image:alt }}">
+                </a>
+            </div>
+            <div class="w-full px-8 pt-8 lg:w-5/12 2xl:w-6/12 lg:pt-0">
+                    {{ categories }}
+                    {{ content }}
+                    {{ /categories }}
+                <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    <h1 class="mt-6 mb-4 text-5xl font-black leading-normal tracking-wide capitalize">{{ title }}</h1>
+                </a>
+                <p class="leading-relaxed text-txtLight max-w-prose">{{ article_summary}}</p>
+                <a href="{{ url }}" class="inline-flex flex-row items-center justify-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    Read Article
+                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16"/>
+                            <path d="M13 5l7 7-7 7"/>
+                        </svg>                                              
+                    </span>
+                </a>
+                <div class="flex flex-row items-center mt-12 lg:mt-16">
+                    <img src="{{ author:avatar }}" alt="{{ author:name }}'s Profile Picture" class="w-12 h-12 rounded-full bg-primary">
+                    <p class="pl-4 text-txtLight">By<span class="mx-1.5 font-medium underline text-txtMain">{{ author:name }}</span>{{ date }}</p>
+                </div>
+            </div>
+        </div>
+        {{ /collection:blog }}
+    </div>
+    </section>
+    <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-gray-50">
+        <div class="px-10 py-24">
+            <div class="container">
+                <h2 class="mb-16 text-3xl font-bold text-txtMain">Frontend Articles</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-10">
+                {{ collection:blog taxonomy:categories="frontend" limit="4" }} 
+                <div class="w-full">
+                    {{ partial:blog/partials/feature-article }}
+                </div>
+                {{ /collection:blog }}
+            </div>
+            <div class="container pt-12">
+                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    View All Frontend Articles
+                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16"/>
+                            <path d="M13 5l7 7-7 7"/>
+                        </svg>                                                  
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-gray-50">
+        <div class="px-10 py-24">
+            <div class="container">
+                <h2 class="mb-16 text-3xl font-bold text-txtMain">Backend Articles</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-10">
+                {{ collection:blog taxonomy:categories="backend" limit="4" }} 
+                <div class="w-full">
+                    {{ partial:blog/partials/feature-article }}
+                </div>
+                {{ /collection:blog }}
+            </div>
+            <div class="container pt-12">
+                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    View All Backend Articles
+                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16"/>
+                            <path d="M13 5l7 7-7 7"/>
+                        </svg>                                                  
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-gray-50">
+        <div class="px-10 py-24">
+            <div class="container">
+                <h2 class="mb-16 text-3xl font-bold text-txtMain">Design Articles</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-10">
+                {{ collection:blog taxonomy:categories="design" limit="4" }} 
+                <div class="w-full">
+                    {{ partial:blog/partials/feature-article }}
+                </div>
+                {{ /collection:blog }}
+            </div>
+            <div class="container pt-12">
+                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    View All Design Articles
+                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16"/>
+                            <path d="M13 5l7 7-7 7"/>
+                        </svg>                                                  
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-gray-50">
+        <div class="px-10 py-24">
+            <div class="container">
+                <h2 class="mb-16 text-3xl font-bold text-txtMain">UX Articles</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-10">
+                {{ collection:blog taxonomy:categories="ux" limit="4" }} 
+                <div class="w-full">
+                    {{ partial:blog/partials/feature-article }}
+                </div>
+                {{ /collection:blog }}
+            </div>
+            <div class="container pt-12">
+                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    View All UX Articles
+                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16"/>
+                            <path d="M13 5l7 7-7 7"/>
+                        </svg>                                                  
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-gray-50">
+        <div class="px-10 py-24">
+            <div class="container">
+                <h2 class="mb-16 text-3xl font-bold text-txtMain">Business Articles</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-10">
+                {{ collection:blog taxonomy:categories="business" limit="4"}} 
+                <div class="w-full">
+                    {{ partial:blog/partials/feature-article }}
+                </div>
+                {{ /collection:blog }}
+            </div>
+            <div class="container pt-12">
+                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+                    View All Business Articles
+                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16"/>
+                            <path d="M13 5l7 7-7 7"/>
+                        </svg>                                                  
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
