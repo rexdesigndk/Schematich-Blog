@@ -27,7 +27,9 @@ module.exports = {
     },
     extend: {
         "colors": {
-            "primary": "#121620",
+            "primary": "#7c3aed",
+            "primaryFrom": "#7c3aed",
+            "primaryTo": "#3b82f6",
             "secondary": "#948993",
             "backgroundMain": "#fff",
             "backgroundLight": "#f5f3f3",
@@ -52,7 +54,8 @@ module.exports = {
             translate: ['group-hover', 'group-focus'],
             filter: ['hover', 'focus'],
             saturate: ['hover', 'focus'],
-            borderRadius:  ['focus']
+            borderRadius:  ['focus'],
+            blur: ['group-hover', 'group-focus'],
         },
     },
   plugins: [

@@ -1,14 +1,18 @@
 
     <section class="bg-backgroundLight heropattern-graphpaper-gray-50">
-        <div class="container relative flex items-center justify-center py-40">
+        <div class="container relative flex items-center justify-center pt-40 pb-36">
             <div class="flex flex-col items-center">
                 <h1 class="max-w-3xl font-black leading-normal tracking-wide text-center capitalize text-7xl text-txtMain">Web developer blog by professionals</h1>
-                <p class="mt-6 text-center text-txtLight max-w-prose">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident atque ad excepturi fugiat nesciunt.</p>
-                <div class="flex flex-row items-center space-x-8">
-                    <a href="/blog" class="inline-flex flex-row items-center justify-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                        View All Articles
+                <p class="mt-6 prose text-center text-txtLight ">We strive to give you articles with substance that will expand your knowledge of both delopement itself but also how you can succeed with your business.</p>
+                <div class="flex flex-row items-center mt-16 space-x-8">
+                    <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                        <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                        <span class="relative">View All Articles</span>
                         <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 12h16"/>
                                 <path d="M13 5l7 7-7 7"/>
                             </svg>                                              
@@ -37,11 +41,15 @@
                 <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
                     <h1 class="mt-6 mb-4 text-5xl font-black leading-normal tracking-wide capitalize">{{ title }}</h1>
                 </a>
-                <p class="leading-relaxed text-txtLight max-w-prose">{{ article_summary}}</p>
-                <a href="{{ url }}" class="inline-flex flex-row items-center justify-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                    Read Article
+                <p class="leading-relaxed prose text-txtLight">{{ article_summary}}</p>
+                <a href="{{ url }}" class="relative inline-flex flex-row items-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                    <span class="relative">Read Article</span>
                     <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 12h16"/>
                             <path d="M13 5l7 7-7 7"/>
                         </svg>                                              
@@ -69,13 +77,17 @@
                 {{ /collection:blog }}
             </div>
             <div class="container pt-12">
-                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                    View All Frontend Articles
+                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                    <span class="relative">View All Frontend Articles</span>
                     <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 12h16"/>
                             <path d="M13 5l7 7-7 7"/>
-                        </svg>                                                  
+                        </svg>                                              
                     </span>
                 </a>
             </div>
@@ -94,13 +106,17 @@
                 {{ /collection:blog }}
             </div>
             <div class="container pt-12">
-                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                    View All Backend Articles
+                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                    <span class="relative">View All Backend Articles</span>
                     <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 12h16"/>
                             <path d="M13 5l7 7-7 7"/>
-                        </svg>                                                  
+                        </svg>                                              
                     </span>
                 </a>
             </div>
@@ -119,13 +135,17 @@
                 {{ /collection:blog }}
             </div>
             <div class="container pt-12">
-                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                    View All Design Articles
+                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                    <span class="relative">View All Design Articles</span>
                     <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 12h16"/>
                             <path d="M13 5l7 7-7 7"/>
-                        </svg>                                                  
+                        </svg>                                              
                     </span>
                 </a>
             </div>
@@ -144,13 +164,17 @@
                 {{ /collection:blog }}
             </div>
             <div class="container pt-12">
-                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                    View All UX Articles
+                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                    <span class="relative">View All UX Articles</span>
                     <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 12h16"/>
                             <path d="M13 5l7 7-7 7"/>
-                        </svg>                                                  
+                        </svg>                                              
                     </span>
                 </a>
             </div>
@@ -169,13 +193,17 @@
                 {{ /collection:blog }}
             </div>
             <div class="container pt-12">
-                <a href="" class="inline-flex flex-row items-center justify-center py-4 pr-8 text-sm font-bold tracking-wider capitalize rounded-full hover:bg-opacity-90 group text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
-                    View All Business Articles
+                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse">
+                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                    <span class="relative">View All Business Articles</span>
                     <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 12h16"/>
                             <path d="M13 5l7 7-7 7"/>
-                        </svg>                                                  
+                        </svg>                                              
                     </span>
                 </a>
             </div>
