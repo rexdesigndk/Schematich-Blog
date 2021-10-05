@@ -1,9 +1,1 @@
-tree:
-  -
-    id: ddcfc90d-3b22-49bb-a17e-1ad6dc7965fa
-    title: Home
-    url: /
-  -
-    id: f13cd112-3553-4b67-bfe7-b37ca7db7ef6
-    title: 'All Articles'
-    url: /blog/index
+{  }
