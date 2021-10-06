@@ -56,6 +56,7 @@ module.exports = {
             saturate: ['hover', 'focus'],
             borderRadius:  ['focus'],
             blur: ['group-hover', 'group-focus'],
+            grayscale: ['hover', 'focus'],
         },
     },
   plugins: [
