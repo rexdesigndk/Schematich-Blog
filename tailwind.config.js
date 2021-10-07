@@ -6,6 +6,7 @@ module.exports = {
       './content/**/*.md'
     ]
   },
+  darkMode: 'media',
   important: true,
   theme: { 
     fontFamily: {
@@ -27,25 +28,26 @@ module.exports = {
     },
     extend: {
         "colors": {
-            "primary": "#7c3aed",
-            "primaryFrom": "#7c3aed",
-            "primaryTo": "#3b82f6",
-            "secondary": "#948993",
-            "backgroundMain": "#fff",
-            "backgroundLight": "#f5f3f3",
-            "backgroundLighter": "#fdfdfd",
-            "backgroundPrimary": "#fafafa",
-            "txtMain": "#141516",
-            "txtLight": "#5a5f64",
-            "txtLighter": "#a2acb5",
-            "txtInverse": "#ffffff",
-            "border": "#ededed",
-            "borderPrimary": "#d7e2ff",
-            "backendColor": "#e7183d",
-            "frontendColor": "#ff8d00",
-            "designColor": "#5b89e9",
-            "uxColor": "#aa97eb",
-            "companyColor": "#0d1466"
+            "primary": "var(--primary)",
+            "primaryFrom": "var(--primaryFrom)",
+            "primaryTo": "var(--primaryTo)",
+            "secondary": "var(--secondary)",
+            "backgroundMain": "var(--backgroundMain)",
+            "backgroundLight": "var(--backgroundLight)",
+            "backgroundLighter": "var(--backgroundLighter)",
+            "backgroundPrimary": "var(--backgroundPrimary)",
+            "backgroundPrimary": "var(--backgroundShape)",
+            "txtMain": "var(--txtMain)",
+            "txtLight": "var(--txtLight)",
+            "txtLighter": "var(--txtLighter)",
+            "txtInverse": "var(--txtInverse)",
+            "border": "var(--border)",
+            "borderPrimary": "var(--borderPrimary)",
+            "backendColor": "var(--backendColor)",
+            "frontendColor": "var(--frontendColor)",
+            "designColor": "var(--designColor)",
+            "uxColor": "var(--uxColor)",
+            "companyColor": "var(--companyColor)"
         },
     },
   },

@@ -1,1 +1,9 @@
-{  }
+tree:
+  -
+    id: 3e96451d-9912-46e8-90c1-ed4c422afb76
+    title: Home
+    url: /
+  -
+    id: 5e209392-afb4-4c30-845b-104a1e814d65
+    title: 'All Articles'
+    url: /blog

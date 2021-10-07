@@ -1,14 +1,14 @@
 
 <section class="p-10 transition-all duration-200 ease-out rounded-2xl bg-backgroundPrimary">
     <div class="flex flex-row items-center w-full max-w-full">
-        <a href="{{ url }}" class="block h-64 overflow-hidden transition-shadow duration-100 ease-linear transform hover:filter rounded-xl hover:saturate-150 w-96 bg-primary focus:outline-none focus:ring focus:ring-primary hover:shadow-lg focus:ring-offset-4 focus:ring-offset-secondary">
+        <a href="{{ url }}" class="block h-64 overflow-hidden transition-shadow duration-100 ease-linear transform hover:filter rounded-xl hover:saturate-150 w-96 bg-primary focus:outline-none focus:ring focus:ring-primary hover:shadow-lg focus:ring-offset-4 focus:ring-offset-backgroundPrimary">
             <img class="object-cover w-full h-full max-w-full rounded-xl" src="{{ featured_image }}" alt="{{ featured_image:alt }}">
         </a>
         <div class="flex flex-col items-start flex-1 pl-16">
                 {{ categories }}
                 {{ content }}
                 {{ /categories }}
-            <a href="{{ url }}" class="inline-block mt-6 mb-3 text-txtMain rounded-xl hover:text-primary focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-secondary">
+            <a href="{{ url }}" class="inline-block mt-6 mb-3 text-txtMain rounded-xl hover:text-primary focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundPrimary">
                 <h2 class="text-xl font-bold tracking-wide capitalize line-clamp-1">{{ title }}</h2>
             </a>
             <p class="max-w-md prose text-txtLight line-clamp-2">{{ article_summary }}</p>
@@ -20,7 +20,7 @@
         <div class="flex-shrink-0">
             <ul class="flex flex-col space-y-8 item-start">
                 <li>
-                    <button  aria-label="Share {{ title }} article with link" id="copyUrl"" class="relative inline-flex flex-row items-center text-sm font-bold tracking-wider rounded-full p-2.5 group text-txtInverse">
+                    <button  aria-label="Share {{ title }} article with link" id="copyUrl"" class="relative inline-flex flex-row items-center text-sm font-bold tracking-wider rounded-full p-2.5 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundPrimary">
                         <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-20 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-20 from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
@@ -33,7 +33,7 @@
                     </button>
                 </li>
                 <li>
-                    <a  aria-label="Share {{ title }} article on twitter" href="https://twitter.com/intent/tweet?url=schematics.com{{ url }}&text=I just read {{ title }} and it's amazing" class="relative inline-flex flex-row items-center text-sm font-bold tracking-wider rounded-full p-2.5 group text-txtInverse">
+                    <a  aria-label="Share {{ title }} article on twitter" href="https://twitter.com/intent/tweet?url=schematics.com{{ url }}&text=I just read {{ title }} and it's amazing" class="relative inline-flex flex-row items-center text-sm font-bold tracking-wider rounded-full p-2.5 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundPrimary">
                         <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-20 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-20 from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a  aria-label="Share {{ title }} article on facebook" href="https://www.facebook.com/sharer/sharer.php?u=schematics.com{{ url }}" class="relative inline-flex flex-row items-center text-sm font-bold tracking-wider rounded-full p-2.5 group text-txtInverse">
+                    <a  aria-label="Share {{ title }} article on facebook" href="https://www.facebook.com/sharer/sharer.php?u=schematics.com{{ url }}" class="relative inline-flex flex-row items-center text-sm font-bold tracking-wider rounded-full p-2.5 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundPrimary">
                         <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-20 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-20 from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
