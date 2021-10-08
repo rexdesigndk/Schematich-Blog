@@ -2,7 +2,7 @@
     <section class="bg-no-repeat bg-auto bg-backgroundLight bg-hero-mesh">
         <div class="container relative flex items-center justify-center px-8 pb-24 md:pt-40 pt-36 md:pb-36 md:px-0">
             <div class="flex flex-col items-center">
-                <h1 class="max-w-3xl text-4xl font-black leading-normal tracking-wide text-center capitalize md:text-6xl lg:text-7xl text-txtMain">Web developer blog by professionals</h1>
+                <h1 class="max-w-3xl text-4xl font-black leading-normal tracking-wide text-center capitalize lg:leading-normal md:text-6xl lg:text-7xl text-txtMain">Web developer blog by professionals</h1>
                 <p class="mt-6 prose text-center text-txtLight ">We strive to give you articles with substance that will expand your knowledge of both delopement itself but also how you can succeed with your business.</p>
                 <div class="flex flex-row items-center mt-8 space-x-8 md:mt-16">
                     <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
@@ -28,7 +28,7 @@
         </div>
         <div class="container">
         {{ collection:blog taxonomy:frontpage="article-pinned" }} 
-        <div class="flex flex-wrap -mx-8">
+        <div class="flex flex-wrap w-full -mx-8">
             <div class="w-full px-8 lg:w-7/12 2xl:w-6/12">
                 <a href="{{ url }}" class="block w-full h-full overflow-hidden rounded-xl bg-primary hover:filter hover:saturate-150 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                     <img class="object-cover w-full h-full max-w-full rounded-xl" src="{{ featured_image }}" alt="{{ featured_image:alt }}">
@@ -39,7 +39,7 @@
                     {{ content }}
                     {{ /categories }}
                 <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
-                    <h1 class="mt-6 mb-4 text-3xl font-black leading-normal tracking-wide capitalize md:text-4xl xl:text-5xl">{{ title }}</h1>
+                    <h1 class="mt-6 mb-4 text-3xl font-black leading-normal tracking-wide capitalize xl:leading-normal md:leading-normal md:text-4xl xl:text-5xl">{{ title }}</h1>
                 </a>
                 <p class="leading-relaxed prose text-txtLight">{{ article_summary}}</p>
                 <a href="{{ url }}" class="relative inline-flex flex-row items-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
@@ -65,7 +65,7 @@
     </div>
     </section>
     <section class="border-b border-border bg-backgroundMain ">
-        <div class="px-10 py-32">
+        <div class="px-8 py-20 lg:px-10 lg:py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Frontend Articles</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
@@ -94,7 +94,7 @@
         </div>
     </section>
     <section class="border-b border-border bg-backgroundMain ">
-        <div class="px-10 py-32">
+        <div class="px-8 py-20 lg:px-10 lg:py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Backend Articles</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
@@ -123,7 +123,7 @@
         </div>
     </section>
     <section class="border-b border-border bg-backgroundMain ">
-        <div class="px-10 py-32">
+        <div class="px-8 py-20 lg:px-10 lg:py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Design Articles</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
@@ -152,7 +152,7 @@
         </div>
     </section>
     <section class="border-b border-border bg-backgroundMain ">
-        <div class="px-10 py-32">
+        <div class="px-8 py-20 lg:px-10 lg:py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">UX Articles</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
@@ -181,7 +181,7 @@
         </div>
     </section>
     <section class="bg-backgroundMain ">
-        <div class="px-10 py-32">
+        <div class="px-8 py-20 lg:px-10 lg:py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Business Articles</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
