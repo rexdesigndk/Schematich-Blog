@@ -2,25 +2,27 @@
 @media (prefers-color-scheme: light) {
     :root {
         --primary: #7c3aed;
+        --primaryLight: #a788dc;
         --primaryFrom: #7c3aed;
         --primaryTo: #3b82f6;
-        --secondary: #948993;
+        --secondary: #A890C3;
         --backgroundMain: #fff;
         --backgroundLight: #f5f3f3;
         --backgroundLighter: #fdfdfd;
         --backgroundPrimary: #fafafa;
         --backgroundShape: #F9FAFB;
         --txtMain: #141516;
-        --txtLight: #5a5f64;
+        --txtLight: #425466;
         --txtLighter: #a2acb5;
         --txtInverse: #ffffff;
+        --borderDark: #141516;
         --border: #ededed;
         --borderPrimary: #d7e2ff;
         --backendColor: #e7183d;
         --frontendColor: #ff8d00;
         --designColor: #5b89e9;
         --uxColor: #aa97eb;
-        --companyColor: #0d1466;
+        --businessColor: #0d1466;
 
       }  
   }
@@ -28,26 +30,27 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --primary: #7c3aed;
+        --primaryLight: #a788dc;
         --primaryFrom: #7c3aed;
         --primaryTo: #3b82f6;
-        --secondary: #948993;
+        --secondary: #A890C3;
         --backgroundMain: #051a2d;
         --backgroundLight: #06243d;
         --backgroundLighter: #07233d;
-        --backgroundPrimary: #383838;
+        --backgroundPrimary: #2C1457;
         --backgroundShape: #242424;
         --txtMain: #fff;
         --txtLight: #f5f5f5;
-        --txtLighter: #fafafa;
+        --txtLighter: #edecec;
         --txtInverse: #fff;
-        --border: #202020;
+        --border: #2e2e2e;
         --borderPrimary: #0c112c;
+        --borderDark: #080b1d;
         --backendColor: #e7183d;
         --frontendColor: #ff8d00;
         --designColor: #5b89e9;
         --uxColor: #aa97eb;
-        --companyColor: #0d1466;
-
+        --businessColor: #0d1466;
       }  
   }
   
@@ -98,6 +101,12 @@
     @variants responsive {
       .h-128 {
         height: 40rem
+      }
+      .masonry-child{
+        grid-column: span 1;
+      }
+      .masonry-child:nth-child(4) {
+        grid-column: span 2;
       }
     }
   }

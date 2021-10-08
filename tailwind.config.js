@@ -29,6 +29,7 @@ module.exports = {
     extend: {
         "colors": {
             "primary": "var(--primary)",
+            "primaryLight": "var(--primaryLight)",
             "primaryFrom": "var(--primaryFrom)",
             "primaryTo": "var(--primaryTo)",
             "secondary": "var(--secondary)",
@@ -43,12 +44,16 @@ module.exports = {
             "txtInverse": "var(--txtInverse)",
             "border": "var(--border)",
             "borderPrimary": "var(--borderPrimary)",
+            "borderDark": "var(--borderDark)",
             "backendColor": "var(--backendColor)",
             "frontendColor": "var(--frontendColor)",
             "designColor": "var(--designColor)",
             "uxColor": "var(--uxColor)",
-            "companyColor": "var(--companyColor)"
+            "businessColor": "var(--businessColor)"
         },
+        backgroundImage: theme => ({
+            'hero-mesh': "url('/assets/hero-mesh-alt.png')",
+         }),
     },
   },
     variants: {

@@ -1,11 +1,11 @@
 
-    <section class="bg-backgroundLight heropattern-graphpaper-backgroundShape">
+    <section class="bg-no-repeat bg-auto bg-backgroundLight bg-hero-mesh">
         <div class="container relative flex items-center justify-center pt-40 pb-36">
             <div class="flex flex-col items-center">
                 <h1 class="max-w-3xl font-black leading-normal tracking-wide text-center capitalize text-7xl text-txtMain">Web developer blog by professionals</h1>
                 <p class="mt-6 prose text-center text-txtLight ">We strive to give you articles with substance that will expand your knowledge of both delopement itself but also how you can succeed with your business.</p>
                 <div class="flex flex-row items-center mt-16 space-x-8">
-                    <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
+                    <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                         <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
@@ -30,7 +30,7 @@
         {{ collection:blog taxonomy:frontpage="article-pinned" }} 
         <div class="flex flex-wrap -mx-8">
             <div class="w-full px-8 lg:w-7/12 2xl:w-6/12">
-                <a href="{{ url }}" class="block w-full h-full overflow-hidden rounded-xl bg-primary hover:filter hover:saturate-150 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
+                <a href="{{ url }}" class="block w-full h-full overflow-hidden rounded-xl bg-primary hover:filter hover:saturate-150 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                     <img class="object-cover w-full h-full max-w-full rounded-xl" src="{{ featured_image }}" alt="{{ featured_image:alt }}">
                 </a>
             </div>
@@ -38,11 +38,11 @@
                     {{ categories }}
                     {{ content }}
                     {{ /categories }}
-                <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
+                <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                     <h1 class="mt-6 mb-4 text-5xl font-black leading-normal tracking-wide capitalize">{{ title }}</h1>
                 </a>
                 <p class="leading-relaxed prose text-txtLight">{{ article_summary}}</p>
-                <a href="{{ url }}" class="relative inline-flex flex-row items-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
+                <a href="{{ url }}" class="relative inline-flex flex-row items-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                     <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                     <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
                     <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
@@ -65,147 +65,147 @@
     </div>
     </section>
     <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-backgroundShape">
-        <div class="px-10 py-24">
+        <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Frontend Articles</h2>
-            </div>
-            <div class="grid w-full gap-10 md:grid-cols-2 xl:grid-cols-4">
-                {{ collection:blog taxonomy:categories="frontend" limit="4" }} 
-                <div class="w-full">
-                    {{ partial:blog/partials/feature-article }}
+                <div class="grid grid-cols-3 gap-14">
+                    {{ collection:blog taxonomy:categories="frontend" limit="5" }} 
+                    <div class="w-full masonry-child">
+                        {{ partial:blog/partials/feature-article }}
+                    </div>
+                    {{ /collection:blog }}
                 </div>
-                {{ /collection:blog }}
-            </div>
-            <div class="container pt-12">
-                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
-                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
-                    <span class="relative">View All Frontend Articles</span>
-                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 12h16"/>
-                            <path d="M13 5l7 7-7 7"/>
-                        </svg>                                              
-                    </span>
-                </a>
+                <div class="pt-12">
+                    <a href="/search?q=frontend" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                        <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                        <span class="relative">View All Frontend Articles</span>
+                        <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                            <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 12h16"/>
+                                <path d="M13 5l7 7-7 7"/>
+                            </svg>                                              
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-backgroundShape">
-        <div class="px-10 py-24">
+        <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Backend Articles</h2>
-            </div>
-            <div class="grid w-full gap-10 md:grid-cols-2 xl:grid-cols-4">
-                {{ collection:blog taxonomy:categories="backend" limit="4" }} 
-                <div class="w-full">
-                    {{ partial:blog/partials/feature-article }}
+                <div class="grid grid-cols-3 gap-14">
+                    {{ collection:blog taxonomy:categories="backend" limit="4" }} 
+                    <div class="w-full masonry-child">
+                        {{ partial:blog/partials/feature-article }}
+                    </div>
+                    {{ /collection:blog }}
                 </div>
-                {{ /collection:blog }}
-            </div>
-            <div class="container pt-12">
-                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
-                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
-                    <span class="relative">View All Backend Articles</span>
-                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 12h16"/>
-                            <path d="M13 5l7 7-7 7"/>
-                        </svg>                                              
-                    </span>
-                </a>
+                <div class="pt-12">
+                    <a href="/search?q=backend" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                        <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                        <span class="relative">View All Backend Articles</span>
+                        <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                            <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 12h16"/>
+                                <path d="M13 5l7 7-7 7"/>
+                            </svg>                                              
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-backgroundShape">
-        <div class="px-10 py-24">
+        <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Design Articles</h2>
-            </div>
-            <div class="grid w-full gap-10 md:grid-cols-2 xl:grid-cols-4">
-                {{ collection:blog taxonomy:categories="design" limit="4" }} 
-                <div class="w-full">
-                    {{ partial:blog/partials/feature-article }}
+                <div class="grid grid-cols-3 gap-14">
+                    {{ collection:blog taxonomy:categories="design" limit="4" }} 
+                    <div class="w-full masonry-child">
+                        {{ partial:blog/partials/feature-article }}
+                    </div>
+                    {{ /collection:blog }}
                 </div>
-                {{ /collection:blog }}
-            </div>
-            <div class="container pt-12">
-                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
-                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
-                    <span class="relative">View All Design Articles</span>
-                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 12h16"/>
-                            <path d="M13 5l7 7-7 7"/>
-                        </svg>                                              
-                    </span>
-                </a>
+                <div class="pt-12">
+                    <a href="/search?q=design" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                        <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                        <span class="relative">View All Design Articles</span>
+                        <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                            <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 12h16"/>
+                                <path d="M13 5l7 7-7 7"/>
+                            </svg>                                              
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <section class="border-b border-border bg-backgroundMain heropattern-graphpaper-backgroundShape">
-        <div class="px-10 py-24">
+        <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">UX Articles</h2>
-            </div>
-            <div class="grid w-full gap-10 md:grid-cols-2 xl:grid-cols-4">
-                {{ collection:blog taxonomy:categories="ux" limit="4" }} 
-                <div class="w-full">
-                    {{ partial:blog/partials/feature-article }}
+                <div class="grid grid-cols-3 gap-14">
+                    {{ collection:blog taxonomy:categories="ux" limit="4" }} 
+                    <div class="w-full masonry-child">
+                        {{ partial:blog/partials/feature-article }}
+                    </div>
+                    {{ /collection:blog }}
                 </div>
-                {{ /collection:blog }}
-            </div>
-            <div class="container pt-12">
-                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
-                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
-                    <span class="relative">View All UX Articles</span>
-                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 12h16"/>
-                            <path d="M13 5l7 7-7 7"/>
-                        </svg>                                              
-                    </span>
-                </a>
+                <div class="pt-12">
+                    <a href="/search?q=ux" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                        <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                        <span class="relative">View All UX Articles</span>
+                        <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                            <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 12h16"/>
+                                <path d="M13 5l7 7-7 7"/>
+                            </svg>                                              
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <section class="bg-backgroundMain heropattern-graphpaper-backgroundShape">
-        <div class="px-10 py-24">
+        <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Business Articles</h2>
-            </div>
-            <div class="grid w-full gap-10 md:grid-cols-2 xl:grid-cols-4">
-                {{ collection:blog taxonomy:categories="business" limit="4"}} 
-                <div class="w-full">
-                    {{ partial:blog/partials/feature-article }}
+                <div class="grid grid-cols-3 gap-14 masonry-col-3">
+                    {{ collection:blog taxonomy:categories="business" limit="4"}} 
+                    <div class="w-full masonry-child">
+                        {{ partial:blog/partials/feature-article }}
+                    </div>
+                    {{ /collection:blog }}
                 </div>
-                {{ /collection:blog }}
-            </div>
-            <div class="container pt-12">
-                <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-primary focus:ring-offset-4 focus:ring-offset-backgroundMain">
-                    <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
-                    <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
-                    <span class="relative">View All Business Articles</span>
-                    <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
-                        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 12h16"/>
-                            <path d="M13 5l7 7-7 7"/>
-                        </svg>                                              
-                    </span>
-                </a>
+                <div class="pt-12">
+                    <a href="/search?q=business" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                        <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
+                        <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
+                        <span class="relative">View All Business Articles</span>
+                        <span class="ml-3 duration-150 ease-out transform group-hover:translate-x-1 group-focus:translate-x-1">
+                            <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 12h16"/>
+                                <path d="M13 5l7 7-7 7"/>
+                            </svg>                                              
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
