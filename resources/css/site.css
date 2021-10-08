@@ -97,6 +97,11 @@
          url("/fonts/Inter-Black.woff") format("woff");
   }
 
+.wide-screen-center {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
   @layer utilities {
     @variants responsive {
       .h-128 {

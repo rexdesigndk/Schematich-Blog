@@ -19,12 +19,20 @@
         <meta name="theme-color" content="#ffffff">
         
     </head>
-    <body class="antialiased leading-normal text-txtMain font-stack bg-backgroundMain">
+    <body class="antialiased leading-normal text-txtMain font-stack bg-backgroundMain wide-screen-center">
         {{ partial:blog/partials/navbar }}
-        <div class="">
-            {{ template_content }}
-        </div>
+        {{ template_content }}
         {{ partial:blog/partials/footer }}
         <script src="{{ mix src='/js/site.js' }}"></script>
     </body>
 </html>
+
+
+<script>
+        toggleNavDropdown = document.getElementById('toggleNavDropdown')
+        navDropdown = document.getElementById('navDropdown')
+
+        toggleNavDropdown.addEventListener('click', function() {
+            navDropdown.classList.toggle("hidden")
+        });
+</script>

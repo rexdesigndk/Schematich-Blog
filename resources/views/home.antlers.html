@@ -1,10 +1,10 @@
 
     <section class="bg-no-repeat bg-auto bg-backgroundLight bg-hero-mesh">
-        <div class="container relative flex items-center justify-center pt-40 pb-36">
+        <div class="container relative flex items-center justify-center px-8 pb-24 md:pt-40 pt-36 md:pb-36 md:px-0">
             <div class="flex flex-col items-center">
-                <h1 class="max-w-3xl font-black leading-normal tracking-wide text-center capitalize text-7xl text-txtMain">Web developer blog by professionals</h1>
+                <h1 class="max-w-3xl text-4xl font-black leading-normal tracking-wide text-center capitalize md:text-6xl lg:text-7xl text-txtMain">Web developer blog by professionals</h1>
                 <p class="mt-6 prose text-center text-txtLight ">We strive to give you articles with substance that will expand your knowledge of both delopement itself but also how you can succeed with your business.</p>
-                <div class="flex flex-row items-center mt-16 space-x-8">
+                <div class="flex flex-row items-center mt-8 space-x-8 md:mt-16">
                     <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                         <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
@@ -22,7 +22,7 @@
             </div>
         </div>
     </section>
-    <section class="pt-24 pb-8 heropattern-graphpaper-backgroundShape">
+    <section class="px-8 pt-24 pb-8 md:px-0 heropattern-graphpaper-backgroundShape">
         <div class="container">
             <h2 class="mb-16 text-3xl font-bold text-txtMain">Featured Article</h2>
         </div>
@@ -39,7 +39,7 @@
                     {{ content }}
                     {{ /categories }}
                 <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
-                    <h1 class="mt-6 mb-4 text-5xl font-black leading-normal tracking-wide capitalize">{{ title }}</h1>
+                    <h1 class="mt-6 mb-4 text-3xl font-black leading-normal tracking-wide capitalize md:text-4xl xl:text-5xl">{{ title }}</h1>
                 </a>
                 <p class="leading-relaxed prose text-txtLight">{{ article_summary}}</p>
                 <a href="{{ url }}" class="relative inline-flex flex-row items-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
@@ -68,9 +68,9 @@
         <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Frontend Articles</h2>
-                <div class="grid grid-cols-3 gap-14">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
                     {{ collection:blog taxonomy:categories="frontend" limit="5" }} 
-                    <div class="w-full masonry-child">
+                    <div class="w-full xl:masonry-child">
                         {{ partial:blog/partials/feature-article }}
                     </div>
                     {{ /collection:blog }}
@@ -97,9 +97,9 @@
         <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Backend Articles</h2>
-                <div class="grid grid-cols-3 gap-14">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
                     {{ collection:blog taxonomy:categories="backend" limit="4" }} 
-                    <div class="w-full masonry-child">
+                    <div class="w-full xl:masonry-child">
                         {{ partial:blog/partials/feature-article }}
                     </div>
                     {{ /collection:blog }}
@@ -126,9 +126,9 @@
         <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Design Articles</h2>
-                <div class="grid grid-cols-3 gap-14">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
                     {{ collection:blog taxonomy:categories="design" limit="4" }} 
-                    <div class="w-full masonry-child">
+                    <div class="w-full xl:masonry-child">
                         {{ partial:blog/partials/feature-article }}
                     </div>
                     {{ /collection:blog }}
@@ -155,9 +155,9 @@
         <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">UX Articles</h2>
-                <div class="grid grid-cols-3 gap-14">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
                     {{ collection:blog taxonomy:categories="ux" limit="4" }} 
-                    <div class="w-full masonry-child">
+                    <div class="w-full xl:masonry-child">
                         {{ partial:blog/partials/feature-article }}
                     </div>
                     {{ /collection:blog }}
@@ -184,9 +184,9 @@
         <div class="px-10 py-32">
             <div class="container">
                 <h2 class="mb-16 text-3xl font-bold text-txtMain">Business Articles</h2>
-                <div class="grid grid-cols-3 gap-14 masonry-col-3">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 md:gap-14">
                     {{ collection:blog taxonomy:categories="business" limit="4"}} 
-                    <div class="w-full masonry-child">
+                    <div class="w-full xl:masonry-child">
                         {{ partial:blog/partials/feature-article }}
                     </div>
                     {{ /collection:blog }}

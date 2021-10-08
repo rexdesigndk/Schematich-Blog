@@ -1,14 +1,20 @@
 <div class="absolute top-0 z-20 w-full h-20 " id="navbar">
     <div class="container flex flex-row items-center h-full">
-        <div class="flex flex-row items-stretch w-full">
-            <a href="/" class="inline-flex flex-row items-center flex-shrink-0 px-4 text-xl font-black tracking-widest uppercase text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight rounded-xl">
+        <div class="flex flex-row items-center w-full px-4 md:items-stretch">
+            <a href="/" class="flex-row items-center flex-shrink-0 hidden px-4 text-xl font-black tracking-widest uppercase md:inline-flex text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight rounded-xl">
                 <picture>
                     <source srcset="/assets/logo/dark/text-logo-dark.svg" media="(prefers-color-scheme: dark)">
                     <img class="w-auto h-8" src="/assets/logo/light/text-logo-light.svg" /> 
                 </picture>
             </a>
-            <div class="flex flex-row items-center flex-shrink-0 pl-12 pr-24">
-                <ul class="flex flex-row items-center w-full space-x-6">
+            <a href="/" class="inline-flex flex-row items-center flex-shrink-0 p-0.5 text-xl font-black tracking-widest uppercase md:hidden text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight rounded-xl">
+                <picture>
+                    <source srcset="/assets/logo/dark/icon-logo-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="w-auto h-12" src="/assets/logo/light/icon-logo-light.svg" /> 
+                </picture>
+            </a>
+            <nav class="flex-row items-center flex-shrink-0 hidden pl-4 2xl:pl-12 md:flex">
+                <ul class="flex flex-row items-center w-full space-x-4 lg:space-x-6">
                     {{ nav:collection:pages include_home="true" }} 
                     <li class="inline-flex items-center h-full">
                         <a href="{{ url }}" {{ if is_current || is_parent }} class="inline-block px-3 py-1 font-semibold tracking-wider duration-300 ease-out rounded-full text-txtInverse bg-primary focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight transtion-colors hover:bg-primary hover:text-txtInverse" {{ /if }} class="inline-block px-3 py-1 font-semibold tracking-wider duration-300 ease-out rounded-full focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight transtion-colors hover:bg-primary hover:text-txtInverse">
@@ -17,8 +23,8 @@
                     </li>
                     {{ /nav:collection:pages }}
                 </ul>
-            </div>
-            <div class="flex-auto">
+            </nav>
+            <div class="flex-auto pl-8 md:pl-8 2xl:pl-24">
                 <form action="/search" class="relative flex items-stretch w-full max-w-full">
                     <input  type="text" name="q" placeholder="Search For Articles" type="text" class="w-full h-full py-3 pl-5 font-medium bg-opacity-50 rounded-full bg-gray-50 dark:bg-gray-800 dark:bg-opacity-30 placeholder-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight text-txtMain">
                     <div class="absolute inset-y-0 flex items-center h-full right-2">
@@ -34,8 +40,25 @@
                     </div>
                 </form>
             </div>
-            <div class="flex-shrink-0">
-                <button></button>
+            <div class="flex-shrink-0 inline-block pl-8 md:hidden">
+                <div class="relative">
+                    <button id="toggleNavDropdown" class="bg-backgroundLight p-2.5 rounded-full inline-flex items-center justify-center text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight">
+                        <svg class="w-5 h-5 stroke-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 6h14M5 12h14M5 18h14"/>
+                        </svg>
+                    </button>
+                    <nav id="navDropdown" class="absolute right-0 hidden p-6 rounded-tr-lg bg-backgroundMain rounded-2xl top-12">
+                        <ul class="flex flex-col items-stretch w-full space-y-3">
+                            {{ nav:collection:pages include_home="true" }} 
+                            <li class="flex items-center w-full h-full">
+                                <a href="{{ url }}" {{ if is_current || is_parent }} class="flex w-full h-full px-4 py-1.5 font-semibold tracking-wider duration-300 ease-out rounded-full whitespace-nowrap text-txtInverse bg-primary focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight transtion-colors hover:bg-primary hover:text-txtInverse" {{ /if }} class="flex w-full h-full px-4 py-1.5 font-semibold tracking-wider duration-300 ease-out rounded-full whitespace-nowrap focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight transtion-colors hover:bg-primary hover:text-txtInverse">
+                                    {{ title }}
+                                </a>
+                            </li>
+                            {{ /nav:collection:pages }}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
