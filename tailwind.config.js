@@ -37,7 +37,7 @@ module.exports = {
             "backgroundLight": "var(--backgroundLight)",
             "backgroundLighter": "var(--backgroundLighter)",
             "backgroundPrimary": "var(--backgroundPrimary)",
-            "backgroundPrimary": "var(--backgroundShape)",
+            "backgroundShape": "var(--backgroundShape)",
             "txtMain": "var(--txtMain)",
             "txtLight": "var(--txtLight)",
             "txtLighter": "var(--txtLighter)",
