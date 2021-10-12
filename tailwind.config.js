@@ -1,32 +1,32 @@
 module.exports = {
   purge: {
     content: [
-      './resources/**/*.antlers.html',
-      './resources/**/*.blade.php',
-      './content/**/*.md'
-    ]
-  },
-  darkMode: 'media',
-  important: true,
-  theme: { 
-    fontFamily: {
-        'stack': [            
-            "Inter",
-            "Roboto",
-            "San Francisco",
-            "Akkurat",
-            "Asap",
-            "Lucida Grande",
-            "-apple-system",
-            "BlinkMacSystemFont",
-            "Segoe UI",
-            "sans-serif"
-        ],
+        './resources/**/*.antlers.html',
+        './resources/**/*.blade.php',
+        './content/**/*.md'
+        ]
     },
-    container: {
-        center: true
-    },
-    extend: {
+    darkMode: 'media',
+    important: true,
+    theme: { 
+        fontFamily: {
+            'stack': [            
+                "Inter",
+                "Roboto",
+                "San Francisco",
+                "Akkurat",
+                "Asap",
+                "Lucida Grande",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "sans-serif"
+            ],
+        },
+        container: {
+            center: true
+        },
+        extend: {
         "colors": {
             "primary": "var(--primary)",
             "primaryLight": "var(--primaryLight)",
@@ -53,9 +53,65 @@ module.exports = {
         },
         backgroundImage: theme => ({
             'hero-mesh': "url('/assets/hero-mesh-alt.png')",
-         }),
+        }),
+            typography: (theme) => ({
+                default: {
+                    css: {
+                        color: theme('var(--txtMain)'),
+                        a: {
+                            color: theme('var(--primary)'),
+                            '&:hover': {
+                                color: theme('var(--primaryLight)'),
+                            },
+                        },
+                    },
+                },
+    
+                dark: {
+                    css: {
+                        color: theme('var(--txtMain)'),
+                        a: {
+                            color: theme('var(--primary)'),
+                            '&:hover': {
+                                color: theme('var(--primaryLight)'),
+                            },
+                        },
+    
+                        h1: {
+                            color: theme('var(--txtMain)'),
+                        },
+                        h2: {
+                            color: theme('var(--txtMain)'),
+                        },
+                        h3: {
+                            color: theme('var(--txtMain)'),
+                        },
+                        h4: {
+                            color: theme('var(--txtMain)'),
+                        },
+                        h5: {
+                            color: theme('var(--txtMain)'),
+                        },
+                        h6: {
+                            color: theme('var(--txtMain)'),
+                        },
+    
+                        strong: {
+                            color: theme('var(--txtMain'),
+                        },
+    
+                        code: {
+                            color: theme('var(--txtMain'),
+                        },
+    
+                        figcaption: {
+                            color: theme('var(--txtMain'),
+                        },
+                    },
+                },
+            }),
+        },
     },
-  },
     variants: {
         extend: {
             translate: ['group-hover', 'group-focus'],
@@ -66,7 +122,7 @@ module.exports = {
             grayscale: ['hover', 'focus'],
         },
     },
-  plugins: [
+    plugins: [
     require('@tailwindcss/typography'),
     require("@tailwindcss/forms")({
         strategy: 'class',
@@ -74,5 +130,5 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
     require('tailwindcss-hero-patterns'),
-  ]
+    ]
 }
