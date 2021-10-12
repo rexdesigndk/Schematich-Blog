@@ -54,62 +54,66 @@ module.exports = {
         backgroundImage: theme => ({
             'hero-mesh': "url('/assets/hero-mesh-alt.png')",
         }),
-            typography: (theme) => ({
-                default: {
-                    css: {
-                        color: theme('var(--txtMain)'),
-                        a: {
-                            color: theme('var(--primary)'),
-                            '&:hover': {
-                                color: theme('var(--primaryLight)'),
-                            },
-                        },
-                    },
+        typography: (theme) => ({
+            light: {
+              css: [
+                {
+                  color: "var(--txtLight)",
+                  a: {
+                    color: "var(--txtMain)",
+                  },
+                  strong: {
+                    color: "var(--txtMain)",
+                  },
+                  'ol > li::before': {
+                    color: "var(--txtLighter)",
+                  },
+                  'ul > li::before': {
+                    backgroundColor: "var(--backgroundLight)",
+                  },
+                  hr: {
+                    borderColor: "var(--borderLight)",
+                  },
+                  blockquote: {
+                    color: "var(--txtLight)",
+                    borderLeftColor: "var(--border)",
+                  },
+                  h1: {
+                    color: "var(--txtMain)",
+                  },
+                  h2: {
+                    color: "var(--txtMain)",
+                  },
+                  h3: {
+                    color: "var(--txtMain)",
+                  },
+                  h4: {
+                    color: "var(--txtMain)",
+                  },
+                  'figure figcaption': {
+                    color: "var(--txtMain)",
+                  },
+                  code: {
+                    color: "var(--txtMain)",
+                  },
+                  'a code': {
+                    color: "var(--txtMain)",
+                  },
+                  pre: {
+                    color: "var(--txtMain)",
+                    backgroundColor: theme('var(--backgroundLight)'),
+                  },
+                  thead: {
+                    color: "var(--txtMain)",
+                    borderBottomColor: "var(--borderLight)",
+                  },
+                  'tbody tr': {
+                    borderBottomColor: "var(--border)",
+                  },
                 },
-    
-                dark: {
-                    css: {
-                        color: theme('var(--txtMain)'),
-                        a: {
-                            color: theme('var(--primary)'),
-                            '&:hover': {
-                                color: theme('var(--primaryLight)'),
-                            },
-                        },
-    
-                        h1: {
-                            color: theme('var(--txtMain)'),
-                        },
-                        h2: {
-                            color: theme('var(--txtMain)'),
-                        },
-                        h3: {
-                            color: theme('var(--txtMain)'),
-                        },
-                        h4: {
-                            color: theme('var(--txtMain)'),
-                        },
-                        h5: {
-                            color: theme('var(--txtMain)'),
-                        },
-                        h6: {
-                            color: theme('var(--txtMain)'),
-                        },
-    
-                        strong: {
-                            color: theme('var(--txtMain'),
-                        },
-    
-                        code: {
-                            color: theme('var(--txtMain'),
-                        },
-    
-                        figcaption: {
-                            color: theme('var(--txtMain'),
-                        },
-                    },
-                },
-            }),
+              ],
+            },
+          }),
         },
     },
     variants: {
@@ -120,6 +124,7 @@ module.exports = {
             borderRadius:  ['focus'],
             blur: ['group-hover', 'group-focus'],
             grayscale: ['hover', 'focus'],
+            typography: ['dark']
         },
     },
     plugins: [
