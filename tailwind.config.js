@@ -7,7 +7,6 @@ module.exports = {
         ]
     },
     darkMode: 'media',
-    important: true,
     theme: { 
         fontFamily: {
             'stack': [            

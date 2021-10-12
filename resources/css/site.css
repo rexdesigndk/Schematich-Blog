@@ -102,7 +102,7 @@
     margin: 0 auto;
 }
 
-  @layer utilities {
+@layer utilities {
     @variants responsive {
       .h-128 {
         height: 40rem

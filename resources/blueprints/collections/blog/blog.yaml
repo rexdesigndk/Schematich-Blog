@@ -93,6 +93,15 @@ sections:
           type: template
           display: Template
           localizable: true
+      -
+        handle: video
+        field:
+          display: Video
+          type: video
+          icon: video
+          instructions: 'Attach a video to your article, Youtube Vimeo and MP4, OGV, MOV, or Webm urls are supported'
+          listable: hidden
+          instructions_position: above
   sidebar:
     display: Sidebar
     fields:
@@ -118,4 +127,20 @@ sections:
           taxonomies:
             - categories
           display: Categories
+          mode: select
+      -
+        handle: featured
+        field:
+          type: terms
+          taxonomies:
+            - featured
+          display: Featured
+          mode: select
+      -
+        handle: frontpage
+        field:
+          type: terms
+          taxonomies:
+            - frontpage
+          display: Frontpage
           mode: select
