@@ -19,6 +19,24 @@ window.onscroll = function () {
   }
 };
 
+toggleNavDropdown = document.getElementById('toggleNavDropdown');
+navDropdown = document.getElementById('navDropdown');
+toggleNavDropdown.addEventListener('click', function () {
+  navDropdown.classList.toggle("hidden");
+});
+
+window.onclick = function (event) {
+  if (!event.target.matches('.toggle-nav-dropdown') && event.target.id != 'navDropdown') {
+    var navDropdownMenu = document.getElementsByClassName("nav-dropdown");
+
+    for (var i = 0; i < navDropdownMenu.length; i++) {
+      if (!navDropdownMenu[i].classList.contains('hidden')) {
+        navDropdownMenu[i].classList.add('hidden');
+      }
+    }
+  }
+};
+
 /***/ }),
 
 /***/ "./resources/css/tailwind.css":

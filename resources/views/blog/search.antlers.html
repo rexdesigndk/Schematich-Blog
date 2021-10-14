@@ -1,91 +1,19 @@
-    <section class="border-t border-dashed border-borderPrimary">
-        <div class="container border-l border-r border-dashed border-borderPrimary">
-                <form action="/search/results" class="relative flex items-stretch w-full max-w-full ">
-                    <input  type="search" name="q" placeholder="Search For Articles" type="text" class="w-full p-10 font-medium bg-transparent border-none rounded focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight-opacity-80 focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight-opacity-80-offset-secondary">
-                    <div class="absolute inset-y-0 flex items-center h-full right-10">
-                        <button type="submit" class="p-2.5 bg-primary rounded-full focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight-opacity-80 focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight-opacity-80-offset-secondary">
-                            <svg class="w-8 h-8" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.5 5.46875C15.1204 5.46875 12.7943 6.17437 10.8158 7.49638C8.83727 8.81839 7.2952 10.6974 6.38458 12.8958C5.47396 15.0943 5.2357 17.5133 5.69993 19.8472C6.16416 22.181 7.31003 24.3248 8.99263 26.0074C10.6752 27.69 12.819 28.8358 15.1528 29.3001C17.4867 29.7643 19.9057 29.526 22.1042 28.6154C24.3026 27.7048 26.1816 26.1627 27.5036 24.1842C28.8256 22.2057 29.5313 19.8796 29.5313 17.5C29.5313 14.3091 28.2637 11.2489 26.0074 8.99262C23.7511 6.73632 20.6909 5.46875 17.5 5.46875Z" stroke="white" stroke-width="2.5" stroke-miterlimit="10"/>
-                                <path d="M15.8594 10.9375C14.8859 10.9375 13.9343 11.2262 13.1249 11.767C12.3155 12.3078 11.6847 13.0765 11.3122 13.9759C10.9396 14.8752 10.8422 15.8648 11.0321 16.8196C11.222 17.7743 11.6907 18.6513 12.3791 19.3397C13.0674 20.028 13.9444 20.4968 14.8992 20.6867C15.8539 20.8766 16.8435 20.7791 17.7429 20.4066C18.6422 20.0341 19.4109 19.4032 19.9518 18.5938C20.4926 17.7844 20.7812 16.8328 20.7812 15.8594C20.7812 15.213 20.6539 14.573 20.4066 13.9759C20.1592 13.3787 19.7967 12.8361 19.3397 12.3791C18.8826 11.922 18.34 11.5595 17.7429 11.3122C17.1457 11.0648 16.5057 10.9375 15.8594 10.9375V10.9375Z" stroke="white" stroke-width="2.5" stroke-miterlimit="10"/>
-                                <path d="M19.3895 19.3895L22.9688 22.9688" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                                </svg>                                
-                        </button>
-                    </div>
-                </form>
-        </div>
-    </section>
-    <section>
-        <div class="container border-l border-r border-dashed border-borderPrimary">
-            {{ search:results index="default" }}
-                {{ if no_results }}
-                    <h2>No results found for {{ get:q }}.</h2>
-                {{ else }}
-                    <a href="{{ url }}">
-                        <h2>{{ title }}</h2>
-                        <p>{{ description | truncate:180 }}</p>
-                    </a>
-                {{ /if }}
-            {{ /search:results }}
-        </div>
-    </section>
-    <section class="border-t border-b border-dashed border-borderPrimary">
-        <div class="container px-10 pt-10 pb-6 border-l border-r border-dashed border-borderPrimary">
-            <ul class="flex flex-row items-stretch max-w-full">
-                <li class="mb-3 mr-6">
-                    {{ partial:blog/partials/filter-pill }}
-                        All
-                    {{ /partial:blog/partials/filter-pill }}
-                </li>
-                <li class="mb-3 mr-3">
-                    {{ partial:blog/partials/filter-pill }}
-                        Backend
-                    {{ /partial:blog/partials/filter-pill }}
-                </li>
-                <li class="mb-3 mr-3">
-                    {{ partial:blog/partials/filter-pill }}
-                        Frontned
-                    {{ /partial:blog/partials/filter-pill }}
-                </li>
-                <li class="mb-3 mr-3">
-                    {{ partial:blog/partials/filter-pill }}
-                        Design
-                    {{ /partial:blog/partials/filter-pill }}
-                </li>
-                <li class="mb-3 mr-3">
-                    {{ partial:blog/partials/filter-pill }}
-                        UX
-                    {{ /partial:blog/partials/filter-pill }}
-                </li>
-                <li class="mb-3 mr-3">
-                    {{ partial:blog/partials/filter-pill }}
-                        Company
-                    {{ /partial:blog/partials/filter-pill }}
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="border-b border-dashed border-borderPrimary">
-        <div class="container border-l border-r border-dashed border-borderPrimary">
-            {{ partial:blog/partials/article }}
-        </div>
-    </section>
-    <section class="border-dashed border-borderPrimary border-top border-bottom">
-        <div class="container p-10 border-l border-r border-dashed border-borderPrimary">
-            <div class="">
-                <h2 class="mb-8 text-xl font-bold text-txtMain">Populary Articles</h2>
-                <div class="flex flex-row items-stretch max-w-full space-x-8">
-                    {{ partial:blog/partials/feature-article limit="3" }}
-                </div>
-            </div>
-            <div class="pt-8">
-                <a href="" class="inline-flex flex-row items-center justify-center py-3 pr-8 text-sm font-bold tracking-wider capitalize rounded-full text-txtInverse bg-primary pl-7 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight-opacity-80 focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight focus:ring focus:ring-offset-4 focus:ring-primary  focus:ring-offset-primaryLight-opacity-80-offset-secondary">
-                    I want more
-                    <span class="ml-3">
-                        <svg class="w-4 h-4" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.375 4L12.875 8.5L8.375 13M12.25 8.5H3.125" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                                                      
-                    </span>
+<section>
+    <div class="container border-l border-r border-dashed border-borderPrimary">
+        {{ search:results index="default" }}
+            {{ if no_results }}
+                <h2>No results found for {{ get:q }}.</h2>
+            {{ else }}
+                <a href="{{ url }}">
+                    <h2>{{ title }}</h2>
+                    <p>{{ description | truncate:180 }}</p>
                 </a>
-            </div>
-        </div>
-    </section>
+            {{ /if }}
+        {{ /search:results }}
+    </div>
+</section>
+<section class="border-b border-dashed border-borderPrimary">
+    <div class="container border-l border-r border-dashed border-borderPrimary">
+        {{ partial:blog/partials/article }}
+    </div>
+</section>

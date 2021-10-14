@@ -1,11 +1,11 @@
 
     <section class="overflow-hidden bg-no-repeat bg-auto bg-backgroundMain bg-hero-mesh">
-        <div class="container relative flex items-start justify-start px-8 pb-24 md:pt-40 pt-36 md:pb-28 md:px-0">
+        <div class="container relative flex items-start justify-start px-8 pb-24 md:pt-48 pt-36 md:pb-32 md:px-0">
             <div class="flex flex-wrap w-full">
                 <div class="w-full lg:w-1/2">
                     <div class="flex flex-col items-start">
-                        <h1 class="max-w-4xl text-4xl font-black leading-normal tracking-wide text-left capitalize md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-snug xl:text-6xl 2xl:text-8xl text-txtInverse">Learn From Professionals</h1>
-                        <p class="mt-6 prose text-left text-txtInverse">We strive to give you articles with substance that will expand your knowledge of both delopement itself but also how you can succeed with your business.</p>
+                        <h1 class="max-w-4xl text-4xl font-black leading-normal tracking-wide text-left capitalize md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-snug xl:text-6xl 2xl:text-8xl text-txtInverse">{{ h1_title }}</h1>
+                        <p class="mt-6 prose text-left text-txtInverse">{{ content }}</p>
                         <div class="flex flex-row items-start mt-8 space-x-8 md:mt-16">
                             <a href="/blog" class="relative inline-flex flex-row items-center py-4 pr-8 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                                 <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
@@ -24,8 +24,14 @@
                     </div>
                 </div>
                 <div class="relative hidden w-1/2 lg:block">
-                    <div class="absolute right-0 top-24 ">
-                        <img class="w-full h-full" src="/assets/hero.svg" alt="">
+                    <div class="relative flex items-center justify-center">
+                        <div class="absolute w-full h-full transform left-6 -top-24 rotate-2">
+                            <div class="inline-block max-w-full">
+                                <div class="relative inline-block w-full max-w-full overflow-hidden transform">
+                                    <img class="hero-image spin-slow" src="/assets/hero.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,7 +45,7 @@
         {{ collection:blog taxonomy:frontpage="article-pinned" }} 
         <div class="flex flex-wrap w-full -mx-8">
             <div class="w-full px-8 lg:w-7/12 2xl:w-6/12">
-                <a href="{{ url }}" class="block w-full h-full overflow-hidden rounded-xl bg-primary hover:filter hover:saturate-150 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                <a aria-label=" Read {{ title }}" href="{{ url }}" class="block w-full h-full overflow-hidden rounded-xl bg-primary hover:filter hover:saturate-150 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                     <img loading=lazy class="object-cover w-full h-full max-w-full rounded-xl" src="{{ featured_image }}" alt="{{ featured_image:alt }}">
                 </a>
             </div>
@@ -48,7 +54,7 @@
                     {{ content }}
                     {{ /categories }}
                 <a href="{{ url }}" class="block text-txtMain rounded-xl hover:text-opacity-70 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
-                    <h1 class="mt-6 mb-4 text-3xl font-black leading-normal tracking-wide capitalize xl:leading-normal md:leading-normal md:text-4xl xl:text-5xl">{{ title }}</h1>
+                    <h3 class="mt-6 mb-4 text-3xl font-black leading-normal tracking-wide capitalize xl:leading-normal md:leading-normal md:text-4xl xl:text-5xl">{{ title }}</h3>
                 </a>
                 <p class="leading-relaxed prose text-txtLight">{{ article_summary}}</p>
                 <a href="{{ url }}" class="relative inline-flex flex-row items-center py-4 pr-8 mt-10 text-sm font-bold tracking-wider rounded-full pl-7 group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
@@ -66,7 +72,7 @@
                 </a>
                 <div class="flex flex-row items-center mt-12 lg:mt-16">
                     <img src="{{ author:avatar }}" alt="{{ author:name }}'s Profile Picture" class="w-12 h-12 rounded-full bg-primary">
-                    <p class="pl-4 text-txtLight">By<span class="mx-1.5 font-medium underline text-txtMain">{{ author:name }}</span>{{ date }}</p>
+                    <p class="pl-4 text-txtLight">By<span class="mx-1.5 sm:mx-2 font-medium text-txtMain">{{ author:name }}</span>{{ date }}</p>
                 </div>
             </div>
         </div>

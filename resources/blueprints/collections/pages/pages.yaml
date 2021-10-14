@@ -11,6 +11,18 @@ sections:
           validate:
             - required
       -
+        handle: h1_title
+        field:
+          placeholder: 'Woops Someone Was Suppose To Write Something Smart Here'
+          input_type: text
+          antlers: false
+          display: 'H1 Title'
+          type: text
+          icon: text
+          instructions: 'Write the text which will appear on current page h1 heading'
+          listable: hidden
+          instructions_position: above
+      -
         handle: content
         field:
           type: markdown

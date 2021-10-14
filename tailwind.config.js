@@ -113,6 +113,13 @@ module.exports = {
               ],
             },
           }),
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+           },
+           wiggle: {
+            '0%, 100%': { transform: 'translateY(0deg)' },
+            '50%': { transform: 'translateY(100deg)' },
+          }
         },
     },
     variants: {
@@ -123,7 +130,8 @@ module.exports = {
             borderRadius:  ['focus'],
             blur: ['group-hover', 'group-focus'],
             grayscale: ['hover', 'focus'],
-            typography: ['dark']
+            typography: ['dark'],
+            animation: ['motion-safe', 'motion-reduce']
         },
     },
     plugins: [

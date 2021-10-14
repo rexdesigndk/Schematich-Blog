@@ -15,13 +15,13 @@
         --txtLight: #425466;
         --txtLighter: #a2acb5;
         --txtInverse: #ffffff;
-        --borderDark: #141516;
         --border: #ededed;
+        --borderDark: #141516;
         --borderPrimary: #d7e2ff;
-        --backendColor: #e7183d;
-        --frontendColor: #ff8d00;
-        --designColor: #5b89e9;
-        --uxColor: #aa97eb;
+        --backendColor: #ca0024;
+        --frontendColor: #a55b00;
+        --designColor: #0e43b1;
+        --uxColor: #5033b6;
         --businessColor: #0d1466;
 
       }  
@@ -46,10 +46,10 @@
         --border: #2e2e2e;
         --borderPrimary: #0c112c;
         --borderDark: #080b1d;
-        --backendColor: #e7183d;
-        --frontendColor: #ff8d00;
-        --designColor: #5b89e9;
-        --uxColor: #aa97eb;
+        --backendColor: #ca0024;
+        --frontendColor: #a55b00;
+        --designColor: #0e43b1;
+        --uxColor: #5033b6;
         --businessColor: #0d1466;
       }  
   }
@@ -114,6 +114,11 @@
         grid-column: span 2;
       }
     }
+  }
+  
+  .hero-image {
+    width: 1200px;
+    height: 860px;
   }
   
   .overlay-gradient {

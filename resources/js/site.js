@@ -10,3 +10,21 @@ window.onscroll = function() {
     navbar.classList.add('absolute')
   }
 }
+
+toggleNavDropdown = document.getElementById('toggleNavDropdown')
+navDropdown = document.getElementById('navDropdown')
+
+toggleNavDropdown.addEventListener('click', function() {
+    navDropdown.classList.toggle("hidden")
+});
+
+window.onclick = function(event) {
+if (!event.target.matches('.toggle-nav-dropdown') && event.target.id != 'navDropdown') {
+  let navDropdownMenu = document.getElementsByClassName("nav-dropdown");
+  for (let i = 0; i < navDropdownMenu.length; i++) {
+    if (!navDropdownMenu[i].classList.contains('hidden')) {
+        navDropdownMenu[i].classList.add('hidden');
+    }
+  }
+}
+}
