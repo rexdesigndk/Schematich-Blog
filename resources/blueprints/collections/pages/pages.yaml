@@ -23,10 +23,16 @@ sections:
           listable: hidden
           instructions_position: above
       -
-        handle: content
+        handle: h1_paragraph
         field:
-          type: markdown
-          localizable: true
+          character_limit: '265'
+          antlers: false
+          display: 'H1 paragraph'
+          type: textarea
+          icon: textarea
+          instructions: 'Used to explain the h1 tag in more details'
+          listable: hidden
+          instructions_position: above
       -
         handle: blog_posts
         field:
@@ -39,6 +45,11 @@ sections:
           icon: entries
           listable: hidden
           instructions_position: above
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
   sidebar:
     display: Sidebar
     fields:
