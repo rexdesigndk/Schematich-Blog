@@ -114,9 +114,9 @@ module.exports = {
             },
           }),
           animation: {
-            'spin-slow': 'spin 3s linear infinite',
+            'animate-hover': 'hover 3s linear infinite',
            },
-           wiggle: {
+           hover: {
             '0%, 100%': { transform: 'translateY(0deg)' },
             '50%': { transform: 'translateY(100deg)' },
           }

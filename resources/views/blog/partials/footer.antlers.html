@@ -1,10 +1,10 @@
-<footer class="px-8 py-12 sm:p-14 md:p-20 bg-gradient-to-b to-backgroundLight from-backgroundLight">
+<footer class="px-6 py-10 sm:py-12 sm:px-8 md:p-14 lg:p-20 bg-gradient-to-b to-backgroundLight from-backgroundLight">
     <div class="container">
-        <div class="grid grid-cols-1 gap-10 xl:grid-cols-2">
+        <div class="grid grid-cols-1 gap-12 xl:grid-cols-2">
             <div class="col-span-1">
                 <label for="subNewsletter" class="block mb-6 text-xs font-semibold tracking-widest uppercase sm:text-sm text-txtLight">Be the first to know when we post articles</label>
-                <div class="flex items-stretch space-x-2 sm:space-x-4">
-                    <input placeholder="Name@provider.com" id="subNewsletter" name="subNewsletter" type="email" class="px-6 py-2 bg-transparent border-2 rounded-full border-border placeholder-txtMain form-input focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
+                <div class="flex flex-col items-start space-y-3 sm:space-y-0 sm:space-x-3 sm:flex-row sm:items-stretch sm:space-x-4">
+                    <input placeholder="Name@provider.com" id="subNewsletter" name="subNewsletter" type="email" class="px-6 py-3 bg-transparent border-2 rounded-full md:py-2 border-border placeholder-txtMain form-input focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                     <button class="relative inline-flex flex-row items-center px-6 py-4 text-sm font-bold tracking-wider capitalize rounded-full md:px-8 whitespace-nowrap group text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
                         <span aria-hidden="true" class="absolute top-0 left-0 w-full h-full rounded-full opacity-50 filter blur-sm bg-gradient-to-br from-primaryFrom to-primaryTo"></span>
                         <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
@@ -26,8 +26,13 @@
                 </div>
             </div>
         </div>
-        <div class="pt-12 sm:pt-16 md:pt-24">
-            © 2018-2021 Schematich Blog - All Rights Reserved.
+        <div class="flex flex-col items-stretch pt-12 md:flex-row sm:pt-16 md:pt-24">
+            <div class="flex-1 text-sm">    
+                © 2018-2021 Schematich Blog - All Rights Reserved.
+            </div>
+            <div class="flex flex-row flex-wrap items-start flex-1 pt-6 text-sm md:justify-end md:items-center md:pt-0">
+                Thanks to<a class="mx-2 font-bold tracking-wide underline text-txtMain" href="www.pixeltrue.com">pixeltrue.com</a>for the error/search illustrations
+            </div>
         </div>
     </div>
 </footer>

@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::statamic('search', 'search', [
    'title' => 'Your Search Results',
+   'h1_title' => 'Your Search Results',
+   'paragraph' => 'All Articles',
 ]);
 
 Route::statamic('blog', 'blog/index', [
     'title' => 'All Articles',
+    'h1_title' => 'All Articles',
+    'paragraph' => 'All Articles',
  ]);
