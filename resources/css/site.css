@@ -107,6 +107,9 @@
       .h-128 {
         height: 40rem
       }
+      .w-128 {
+        width: 40rem
+      }
       .masonry-child{
         grid-column: span 1;
       }

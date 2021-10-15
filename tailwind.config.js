@@ -51,7 +51,7 @@ module.exports = {
             "businessColor": "var(--businessColor)"
         },
         backgroundImage: theme => ({
-            'hero-mesh': "url('/assets/hero-mesh-alt.png')",
+            'hero-mesh': "url('/assets/hero-mesh.png')",
         }),
         typography: (theme) => ({
             light: {
