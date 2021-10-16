@@ -1,7 +1,7 @@
 <footer class="px-6 py-10 sm:py-12 sm:px-8 md:p-14 lg:p-20 bg-gradient-to-b to-backgroundLight from-backgroundLight">
     <div class="container">
-        <div class="grid grid-cols-1 gap-12 xl:grid-cols-2">
-            <div class="col-span-1">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <!-- <div class="col-span-1">
                 <label for="subNewsletter" class="block mb-6 text-xs font-semibold tracking-widest uppercase sm:text-sm text-txtLight">Be the first to know when we post articles</label>
                 <div class="flex flex-col items-start space-y-3 sm:space-y-0 sm:space-x-3 sm:flex-row sm:items-stretch sm:space-x-4">
                     <input placeholder="Name@provider.com" id="subNewsletter" name="subNewsletter" type="email" class="px-6 py-3 bg-transparent border-2 rounded-full md:py-2 border-border placeholder-txtMain form-input focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight ">
@@ -13,25 +13,47 @@
                         <span class="relative">Subscribe Now</span>
                     </button>
                 </div>
-            </div>
+            </div> -->
             <div class="col-span-1">
-                <h3 class="block mb-6 text-xs font-semibold tracking-widest uppercase sm:text-sm text-txtLight">Services We've Made</h3>
-                <div class="grid gird-cols-1 md:grid-cols-3">
-                    <div class="col-span-1">
-                        <a href="https://shop.rexdigital.group" rel="noopener" class="inline-flex flex-row items-center transition-all duration-200 ease-out rounded focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight filter grayscale hover:grayscale-0 focus:grayscale-0">
-                            <img class="w-12 h-12 mr-4" src="/assets/rexshoplogo.svg" alt=" logo rex digital shop logo, a payment and shop platform">
-                            <span class="font-bold whitespace-nowrap">Rex Digital Shop</span>
-                        </a>
+                <a href="https://shop.rexdigital.group" rel="noopener" target="_blank" class="block p-8 bg-center bg-no-repeat bg-cover bg-backgroundLighter rounded-2xl bg-rexshop focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight">
+                    <h3 class="block mb-6 text-xs font-semibold tracking-widest capitalize sm:text-sm text-txtLight">Try our payment and shop system</h3>
+                    <div class="inline-flex flex-row items-center transition-all duration-200 ease-out rounded ">
+                        <img class="w-12 h-12 mr-4" src="/assets/rexshoplogo.svg" alt=" logo rex digital shop logo, a payment and shop platform">
+                        <span class="font-bold whitespace-nowrap">Rex Digital Shop</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-        <div class="flex flex-col items-stretch pt-12 md:flex-row sm:pt-16 md:pt-24">
+        <div class="flex flex-col items-center pt-12 md:flex-row sm:pt-16 md:pt-24">
             <div class="flex-1 text-sm">    
                 © 2018-2021 Schematich Blog - All Rights Reserved.
             </div>
-            <div class="flex flex-row flex-wrap items-start flex-1 pt-6 text-sm md:justify-end md:items-center md:pt-0">
-                Thanks to<a class="mx-2 font-bold tracking-wide underline text-txtMain" href="www.pixeltrue.com">pixeltrue.com</a>for the error/search illustrations
+            <div class="flex flex-1 pt-6 text-sm md:justify-end md:items-center md:pt-0">
+               <ul class="flex flex-row flex-wrap items-start space-x-8">
+                   <li>
+                        <a href="https://www.youtube.com/channel/UCp-Kiar6k0_fp1t4zEQj7hA" target="_blank" rel="noopener"  class="flex items-center justify-center p-3 rounded-full hover:bg-primaryLight bg-primary text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight">
+                            <svg class="w-5 h-5 stroke-current" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                                <path d="m14 12-3.5 2v-4l3.5 2Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12.707v-1.415c0-2.895 0-4.343.905-5.274.906-.932 2.332-.972 5.183-1.053C9.438 4.927 10.818 4.9 12 4.9c1.181 0 2.561.027 3.912.065 2.851.081 4.277.121 5.182 1.053.906.931.906 2.38.906 5.274v1.415c0 2.896 0 4.343-.905 5.275-.906.931-2.331.972-5.183 1.052-1.35.039-2.73.066-3.912.066-1.181 0-2.561-.027-3.912-.066-2.851-.08-4.277-.12-5.183-1.052C2 17.05 2 15.602 2 12.708Z" stroke="currentColor"/>
+                            </svg>
+                        </a>
+                   </li>
+                   <li>
+                        <a href="//twitter.com/jesper9610" target="_blank" rel="noopener"  class="flex items-center justify-center p-3 rounded-full hover:bg-primaryLight bg-primary text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight">
+                            <svg class="w-5 h-5 stroke-current" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                                <path d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4.53s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                   </li>
+                   <li>
+                        <a href="//github.com/rexdesigndk/Schematich-Blog" target="_blank" rel="noopener"  class="flex items-center justify-center p-3 rounded-full hover:bg-primaryLight bg-primary text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight">
+                            <svg class="w-5 h-5 stroke-current" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75 5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 20.027c-3 .973-5.5 0-7-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                   </li>
+               </ul>
             </div>
         </div>
     </div>

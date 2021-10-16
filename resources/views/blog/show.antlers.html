@@ -16,7 +16,7 @@
                     {{ article_summary }}
                 </p>
                 <div class="flex flex-row items-center pt-10">
-                    <img src="{{ author:avatar }}" alt="{{ author:name }}'s Profile Picture" class="bg-black rounded-full w-14 h-14">
+                    <img src="{{ author:avatar }}" alt="{{ author:name }}'s Profile Picture" class="rounded-full w-14 h-14">
                     <p class="pl-4 text-txtLight">By<span class="mx-2 font-medium underline text-txtMain">{{ author:name }}</span>{{ date }}</p>
                 </div>
             </div>
@@ -86,6 +86,7 @@
                     {{ content }}
                 </article>
             </div>
+            {{ video }}
             <div class="flex-shrink-0">
                 <div class="sticky top-0 pt-24">
                     {{ if video | is_embeddable }}
@@ -97,6 +98,7 @@
                     {{ /if }}
                 </div>
             </div>
+            {{ video}}
         </div>
     </div>
 </section>

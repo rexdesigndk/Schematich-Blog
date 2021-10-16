@@ -52,6 +52,7 @@ module.exports = {
         },
         backgroundImage: theme => ({
             'hero-mesh': "url('/assets/hero-mesh.png')",
+            'rexshop': "url('/assets/rexshop-bg.svg')",
         }),
         typography: (theme) => ({
             light: {
