@@ -34,9 +34,10 @@
                             <span aria-hidden="true" class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br rounded-full filter group-active:opacity-0 opacity-50 from-primaryFrom to-primaryTo"></span>
                             <span aria-hidden="true" class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-full shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm group-focus:blur-sm from-primaryFrom to-primaryTo"></span>
                             <span aria-hidden="true" class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-full bg-gradient-to-br to-primaryFrom from-primaryTo"></span>
-                            <svg class="relative w-4 h-4 stroke-current"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"/>
-                            </svg>                        
+                            <svg class="relative w-5 h-5 stroke-current" aria-labelledby="searchButton"  stroke-width="1.5" viewBox="0 0 24 24" fill="none">
+                                <title id="searchButton">A magnifying glass that represent searching for an article</title>
+                                <path d="M15.5 15.5 19 19M5 11a6 6 0 1 0 12 0 6 6 0 0 0-12 0Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>               
                         </button>
                     </div>
                 </form>
@@ -44,9 +45,9 @@
             <div class="flex-shrink-0 inline-block pl-6 md:hidden">
                 <div class="relative">
                     <button title="" id="toggleNavDropdown" class="bg-backgroundLight toggle-nav-dropdown p-2.5 rounded-full inline-flex items-center justify-center text-txtMain focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight">
-                        <svg class="w-5 h-5 pointer-events-none stroke-current" aria-labelledby="mobileMenuTitle"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg  class="w-5 h-5 pointer-events-none stroke-current" aria-labelledby="mobileMenuTitle" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
                             <title id="mobileMenuTitle">Three lines that represent a burger menu</title>
-                            <path d="M5 6h14M5 12h14M5 18h14"/>
+                            <path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                     <nav id="navDropdown" class="absolute right-0 hidden p-6 rounded-tr-lg nav-dropdown bg-backgroundMain rounded-2xl top-14">
