@@ -86,7 +86,7 @@
                     {{ content }}
                 </article>
             </div>
-            {{ video }}
+            {{ if is_video }}
             <div class="flex-shrink-0">
                 <div class="sticky top-0 pt-24">
                     {{ if video | is_embeddable }}
@@ -98,7 +98,7 @@
                     {{ /if }}
                 </div>
             </div>
-            {{ video}}
+            {{ /if}}
         </div>
     </div>
 </section>
