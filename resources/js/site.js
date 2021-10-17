@@ -19,12 +19,12 @@ toggleNavDropdown.addEventListener('click', function() {
 });
 
 window.onclick = function(event) {
-if (!event.target.matches('.toggle-nav-dropdown') && event.target.id != 'navDropdown') {
-  let navDropdownMenu = document.getElementsByClassName("nav-dropdown");
-  for (let i = 0; i < navDropdownMenu.length; i++) {
-    if (!navDropdownMenu[i].classList.contains('hidden')) {
-        navDropdownMenu[i].classList.add('hidden');
+    if (!event.target.matches('.toggle-nav-dropdown') && event.target.id != 'navDropdown') {
+    let navDropdownMenu = document.getElementsByClassName("nav-dropdown");
+    for (let i = 0; i < navDropdownMenu.length; i++) {
+        if (!navDropdownMenu[i].classList.contains('hidden')) {
+            navDropdownMenu[i].classList.add('hidden');
+        }
     }
-  }
-}
+    }
 }
