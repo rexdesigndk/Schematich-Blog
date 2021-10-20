@@ -4,6 +4,7 @@ RUN apk upgrade \
 	&& apk update \ 
 	&& apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
 	&& pecl install -o -f redis \
+	&& pecl install swoole \
 	&& apk add bash \
 	&& apk add openssl \
 	&& apk add zip \
@@ -38,6 +39,6 @@ COPY config/php.ini /usr/local/etc/php/conf.d/php.ini
 
 RUN docker-php-ext-install pdo pdo_mysql pcntl mysqli tokenizer
 
-RUN docker-php-ext-enable redis
+RUN docker-php-ext-enable redis swoole
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
