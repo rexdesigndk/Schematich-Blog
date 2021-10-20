@@ -1,18 +1,18 @@
 <section>
     <div class="bg-no-repeat bg-auto bg-backgroundLight bg-hero-mesh">
         <div
-            class="container pt-40 pb-64"
+            class="container px-6 pt-32 pb-48 sm:pb-64 sm:px-8 md:pt-40 md:px-0"
         >
-            <div class="flex flex-col items-center justify-center ">
+            <div class="flex flex-col items-start md:items-center md:justify-center ">
                     {{ categories }}
                     {{ content }}
                     {{ /categories }}
                 <h1
-                    class="max-w-4xl pt-10 pb-6 text-5xl font-black leading-normal tracking-wide text-center capitalize text-txtMain"
+                    class="max-w-4xl pt-10 pb-6 text-4xl font-black leading-normal tracking-wide text-left capitalize md:text-center md:text-5xl text-txtMain"
                 >
                     {{ title }}
                 </h1>
-                <p class="text-center text-txtLight max-w-prose">
+                <p class="text-left md:text-center text-txtLight max-w-prose">
                     {{ article_summary }}
                 </p>
                 <div class="flex flex-row items-center pt-10">
@@ -22,10 +22,10 @@
             </div>
         </div>
     </div>
-    <div class="container -mt-48">
+    <div class="container px-6 -mt-32 sm:-mt-48 sm:px-8 md:px-0">
         <img
         src="{{ featured_image }}"
-        class="object-cover object-center w-full max-w-full shadow-xl rounded-2xl h-96 lg:h-128"
+        class="object-cover object-center w-full h-64 max-w-full shadow-xl rounded-2xl sm:h-96 lg:h-128"
         alt="{{ featured_image:alt }}"
     />
     </div>
