@@ -37,7 +37,7 @@ RUN apk upgrade \
 
 COPY config/php.ini /usr/local/etc/php/conf.d/php.ini
 
-RUN docker-php-ext-install pdo pdo_mysql pcntl mysqli tokenizer
+RUN docker-php-ext-install pdo pdo_mysql pcntl mysqli tokenizer exif
 
 RUN docker-php-ext-enable redis swoole
 
