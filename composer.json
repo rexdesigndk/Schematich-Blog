@@ -17,7 +17,6 @@
         "laravel/framework": "^8.0",
         "laravel/octane": "^1.0",
         "laravel/tinker": "^2.0",
-        "spatie/statamic-responsive-images": "^2.8",
         "statamic/cms": "3.2.*"
     },
     "require-dev": {

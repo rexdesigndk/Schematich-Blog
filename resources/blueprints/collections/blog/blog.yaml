@@ -38,10 +38,9 @@ sections:
           display: 'Featured Image'
           type: assets
           icon: assets
-          instructions: 'The main image that will be shown on top of the article'
+          instructions: 'The image which will be the article thumbnail'
           listable: hidden
           instructions_position: above
-          max_files: 1
           validate:
             - required
       -
