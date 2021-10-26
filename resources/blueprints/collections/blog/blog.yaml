@@ -36,6 +36,7 @@ sections:
           allow_uploads: true
           show_filename: true
           display: 'Featured Image'
+          antlers: true
           type: assets
           icon: assets
           instructions: 'The image which will be the article thumbnail'
