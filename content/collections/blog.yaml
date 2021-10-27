@@ -3,11 +3,9 @@ template: blog/show
 layout: layout
 taxonomies:
   - categories
-  - featured
-  - frontpage
+  - pinned_to_homepage
 revisions: false
 route: '/blog/{slug}'
-antlers: true
 date: true
 sort_dir: asc
 date_behavior:
