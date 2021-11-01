@@ -3,8 +3,7 @@ template: blog/show
 layout: layout
 taxonomies:
   - categories
-  - featured
-  - frontpage
+  - pinned_to_homepage
 revisions: false
 route: '/blog/{slug}'
 date: true

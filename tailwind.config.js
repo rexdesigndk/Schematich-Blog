@@ -132,7 +132,8 @@ module.exports = {
             blur: ['group-hover', 'group-focus'],
             grayscale: ['hover', 'focus'],
             typography: ['dark'],
-            animation: ['motion-safe', 'motion-reduce']
+            animation: ['motion-safe', 'motion-reduce'],
+            brightness: ['hover'],
         },
     },
     plugins: [
