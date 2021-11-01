@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /public/vendor/statamic
+/public/css/tailwind.css
+/public/js/site.js
 /storage/*.key
 /vendor
 .env
