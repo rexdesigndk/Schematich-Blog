@@ -1,0 +1,119 @@
+     <section class="relative px-8 pt-40 pb-48 bg-hero-mesh md:px-0">
+            <div class="container">
+             <h1 class="text-5xl font-black leading-normal tracking-wide capitalize text-txtMain">{{ h1_title }}</h1>
+             <p class="mt-6 prose text-left text-txtInverse">{{ h1_paragraph }}</p>
+            </div>
+    </section>
+    <section class="pb-16 sm:pb-28 md:pb-48 bg-backgroundMain ">
+        <div class="container">
+            <div class="relative z-10 p-6 -mt-24 space-y-12 shadow-2xl md:p-8 lg:p-10 xl:p-12 bg-backgroundMain sm:rounded-2xl">
+                {{ collection:blog limit="20" paginate="true" as="posts"  }}
+
+                {{ posts }}
+                    {{ partial:blog/partials/article }}
+                {{ /posts }}
+
+                {{ paginate }}
+                <ul class="flex flex-row items-center justify-center space-x-4">
+                    {{ if prev_page }}
+                        <li>
+                            <a href="{{ prev_page }}" class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold tracking-wider hover:bg-backgroundLighter rounded-full bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">
+                                <svg class="w-4 h-4 mr-2.5 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m15 4-8 8 8 8"></path>
+                                </svg>
+                                Previous
+                            </a>
+                        </li>
+                    {{ else }}
+                        <li>
+                            <span aria-disabled="true" class="inline-flex select-none flex-row items-center px-3.5 py-2 text-sm opacity-50 font-bold tracking-wider rounded-full bg-backgroundLight text-txtInverse">
+                                <svg class="w-4 h-4 mr-2.5 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m15 4-8 8 8 8"></path>
+                                </svg>
+                                Previous
+                            </span>
+                        </li>
+                    {{ /if }}
+            
+                    {{ links:segments }}
+            
+                        {{ first }}
+                            {{ if page == current_page }}
+                                <li aria-disabled="true">
+                                    <span aria-disabled="true" class="inline-flex flex-row items-center select-none px-3.5 py-2 text-sm opacity-50 font-bold tracking-wider rounded-full bg-backgroundLight text-txtInverse">{{ page }}</span>
+                                </li>
+                            {{ else }}
+                                <li>
+                                    <a  href="{{ url }}" class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold hover:bg-backgroundLighter tracking-wider rounded-full bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">
+                                        {{ page }}
+                                    </a>
+                                </li>
+                            {{ /if }}
+                        {{ /first }}
+            
+                        {{ if slider }}
+                            <li aria-disabled="true">
+                                <span class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold hover:bg-backgroundLighter tracking-wider rounded-full bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">...</span>
+                            </li>
+                        {{ /if }}
+            
+                        {{ slider }}
+                            {{ if page == current_page }}
+                                <li aria-disabled="true">
+                                    <span class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold tracking-wider rounded-full opacity-50 bg-primaryLight text-txtInverse">{{ page }}</span>
+                                </li>
+                            {{ else }}
+                                <li>
+                                    <a href="{{ url }}" class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold hover:bg-backgroundLighter tracking-wider rounded-full opacity-50 bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">
+                                        {{ page }}
+                                    </a>
+                                </li>
+                            {{ /if }}
+                        {{ /slider }}
+            
+                        {{ if slider || (!slider && last) }}
+                            <li class="inline-flex flex-row items-center px-3.5 py-2 opacity-20 text-sm font-bold tracking-wider rounded-full bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary"><span>...</span></li>
+                        {{ /if }}
+            
+                        {{ last }}
+                            {{ if page == current_page }}
+                                <li>
+                                    <span class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold tracking-wider rounded-full bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">{{ page }}</span>
+                                </li>
+                            {{ else }}
+                                <li>
+                                    <a href="{{ url }}" class="inline-flex flex-row items-center px-3.5 py-2 text-sm font-bold tracking-wider rounded-full bg-backgroundLight text-txtInverse focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">
+                                        {{ page }}
+                                    </a>
+                                </li>
+                            {{ /if }}
+                        {{ /last }}
+            
+                    {{ /links:segments }}
+            
+                    {{ if next_page }}
+                        <li>
+                            <a href="{{ next_page }}" class="inline-flex flex-row items-center py-2 pl-5 pr-4 text-sm font-bold tracking-wider rounded-full bg-primary text-txtInverse hover:bg-secondary focus:outline-none focus:ring focus:ring-offset-4 focus:ring-primary focus:ring-offset-primaryLight focus:ring-offset-primaryLight-opacity-80 focus:ring-offset-primaryLight-opacity-80-offset-backgroundPrimary">
+                                Next
+                                <svg class="w-4 h-4 ml-2.5 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m8 4 8 8-8 8"/>
+                                </svg>
+                            </a>
+                        </li>
+                    {{ else }}
+                        <li>
+                            <span aria-disabled="true"  class="inline-flex flex-row items-center py-2 pl-5 pr-4 text-sm font-bold tracking-wider rounded-full opacity-50 select-none bg-backgroundLight text-txtInverse ">
+                                Next
+                                <svg class="w-4 h-4 ml-2.5 stroke-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m8 4 8 8-8 8"/>
+                                </svg>
+                            </span>
+                        </li>
+                    {{ /if }}
+                </ul>
+                {{ /paginate }}
+                
+                {{ /collection:blog  }} 
+            </div>
+        </div>
+    </section>
